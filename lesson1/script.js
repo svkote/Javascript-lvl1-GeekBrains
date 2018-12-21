@@ -1,5 +1,3 @@
-// var tempCel = prompt('Введите температуру по Цельсию');
-
 window.addEventListener('DOMContentLoaded', function () {
         // #1
     var tempCel = document.getElementById("tempCel"),
