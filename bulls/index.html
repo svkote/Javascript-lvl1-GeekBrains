@@ -1,37 +1,37 @@
 <!doctype html>
-<html lang="en">
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Быки и Коровы - логическая игра</title>
 
-<head>
-    <title>Lesson #3</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="style.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">Ваш браузер <strong>устарел</strong>. Пожалуйста,  <a href="http://browsehappy.com/">обновите его</a>, чтобы получить наилучший опыт .</p>
+        <![endif]-->
 
-<body>
-    <div class="container">
-        
+        <!-- Add your site or application content here -->
+
+        <div>
+            <div><input type="button" onclick="startGame()" value="Начать игру" id="startButton" class="btn"></div>
+         <div id="game">   <div id="1">
+                <p>Код не содержит повторяющихся цифр</p>
+            </div>
+            <div id="2">Введите код: <input type="number" name="usercod" id="usercode" min="0123" max="9876"><br>
+                <input type="button" onclick="checkUserCode()" value="Отправить" class="btn"><br>
+                <input type="button" onclick="restartGame()" value="Новая игра" class="btn">
+            </div>
+         </div>
+        </div>
 
 
-    </div>
 
 
+        <script src="script.js"></script>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
 
-    <script src="script.js"></script>
-</body>
-
+    </body>
 </html>
