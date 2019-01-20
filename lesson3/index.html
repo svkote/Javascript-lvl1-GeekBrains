@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Lesson #3</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <ol class="row">
+            <li class="col-12 col-md-5">С помощью цикла while вывести все простые числа в промежутке от 0 до 100 <br><br>
+                <b>Решение:</b> <br><br>
+                <p>Простое число — натуральное (целое положительное) число, имеющее ровно два различных натуральных делителя — единицу и самого себя</p>
+                <pre>
+
+    let prime = 1;
+    let primeArr = [];
+
+    while (prime <= 100) {
+        if (prime == 1) {
+            primeArr.push(1)
+        } else {
+            let result = 2;
+            let i = 2;
+            while (prime % i !== 0 ){
+                i += 1;
+                result +=1;
+                } 
+            if (result == prime) {
+                primeArr.push(result);
+            }
+        }
+        prime += 1;
+    }
+
+    console.log(primeArr);
+                </pre>
+            </li>
+
+            <li class="col-12 col-md-5">С помощью цикла do…while написать функцию для вывода чисел от 0 до 10, чтобы результат выглядел так:
+                    0 – это ноль
+                    1 – нечетное число
+                    2 – четное число
+                    3 – нечетное число
+                    …
+                    10 – четное число
+                <br><br>
+                <b>Решение:</b> <br><br>
+            <pre>
+    let a = -1;
+    do {
+        a += 1;
+        if (a === 0) {
+            console.log(a, " - это ноль");
+        } else if (a % 2 ===0) {
+            console.log(a, " - это четное число");
+        } else {
+            console.log(a, " - это нечетное число");
+        }
+    } while (a < 10);
+            </pre>
+            </li>
+
+            <li class="col-12 col-md-5">* Вывести с помощью цикла for числа от 0 до 9, НЕ используя тело цикла. То есть выглядеть должно вот так:
+
+                    for(…){// здесь пусто}
+                    <br><br>
+                    <b>Решение:</b> <br><br>
+                    <pre>
+    for (let i = 0; i < 9; i++, console.log(i)) {}
+                    </pre>
+            </li>
+
+            <li class="col-12 col-md-5">* Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:
+                <pre>
+                    x
+                    xx
+                    xxx
+                    xxxx
+                    xxxxx
+                </pre>
+                <b>Решение:</b> <br><br>
+
+                <pre>
+    let arr = [];
+    let end = 0;
+    while (end < 20){
+        end++;
+        arr.push('x');
+        console.log(arr);
+    }
+                </pre>
+            </li>
+
+        </ol>
+
+
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
