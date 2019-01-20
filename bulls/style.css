@@ -1,0 +1,16 @@
+body {
+    font-size: 12px;
+    background-image: url('img/back.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.green {
+    color: rgb(38, 173, 56);
+}
+li {
+    background-color: rgba(184, 227, 247, 0.616);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+}
