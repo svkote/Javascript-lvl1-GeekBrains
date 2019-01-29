@@ -29,14 +29,14 @@ function partitionOfNumbers() {
     ];
   
     const goalKeeper = {
-      defendSector: null, // сектор который мы защещаем
+      defendSector: null, // сектор который мы защищаем
       savesToWin: 2, // количество голов для победы
-      saves: 0, // количество количество отбитых голов
+      saves: 0, // количество отбитых голов
       init() {
         console.log('HERE');
-        // Номер сектора от 0до 8
+        // Номер сектора от 0 до 8
         const sectorNum = Math.trunc(Math.random() * 9);
-        // куда вратарь стал
+        // куда вратарь встал
         this.defendSector = sectors[sectorNum];
         console.log(this.defendSector);
       },
@@ -59,7 +59,7 @@ function partitionOfNumbers() {
       goals: 0,
       goalsToWin: 10,
       // сектор который мы атакуем
-      // если введенные данные верны вернет правда
+      // если введенные данные верны вернет истину
       init(sector) {
         if (sectors.indexOf(sector) >= 0) {
           this.sectorToAttack = sector;
@@ -77,7 +77,7 @@ function partitionOfNumbers() {
           return false;
         }
         console.log('GOAL!!!'); // иначе гол
-        this.goals++; // прибовляем гол атакеру
+        this.goals++; // прибавляем гол атакеру
         return true;
       },
       // проверка на победу
