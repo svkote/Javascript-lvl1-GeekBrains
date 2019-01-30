@@ -66,10 +66,10 @@ function checkUserCode(){
 
     }
     if (bulls !== 4) {
-        p.appendChild(document.createTextNode("Ваш код: "+document.getElementById('usercode').value+", Быки: "+bulls+", Коровы: "+cows));
-
-        div.appendChild(p);} else {p.appendChild(document.createTextNode("Ура, код взломан! Код: " + document.getElementById('usercode').value));
-
+        p.appendChild(document.createTextNode("Ваш код: " + document.getElementById('usercode').value + ", Быки: "+bulls+", Коровы: "+cows));
+        div.appendChild(p);
+    } else {
+        p.appendChild(document.createTextNode("Ура, код взломан! Код: " + document.getElementById('usercode').value));
         div.appendChild(p);}
 
 }
