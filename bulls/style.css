@@ -1,5 +1,5 @@
 body {
-    font-size: 12px;
+    font-size: 16px;
     background-image: url('img/back.jpg');
     background-attachment: fixed;
     background-size: cover;
@@ -13,4 +13,9 @@ li {
     padding: 20px;
     margin: 20px;
     border-radius: 20px;
+}
+.card {
+    margin-top: 140px;
+    padding: 30px;
+    background-color: #cdd8c9;
 }
