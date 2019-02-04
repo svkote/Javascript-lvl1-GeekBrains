@@ -1,9 +1,11 @@
 function myProcessor() {
     const addBtn = document.getElementById('addInBasket'); // Кнопка добавления в корзину
-    let currentId; // айди текущего товара
-    let basketList = document.getElementById('basketList'); // Вывод содержимого корзины
-    let basketSumm = document.getElementById('basketSumm'); // Общая сумма
-    let infoProduct = document.getElementById('infoProduct'); // Название и цена
+    let currentId, // айди текущего товара
+        basketList = document.getElementById('basketList'), // Вывод содержимого корзины
+        basketSumm = document.getElementById('basketSumm'), // Общая сумма
+        infoProduct = document.getElementById('infoProduct'), // Название и цена
+        last = document.getElementById('last'), 
+        next = document.getElementById('next');
 
     // Список товаров, уже имеющийся
     const basket = [
@@ -15,7 +17,6 @@ function myProcessor() {
         {name: 'Луна для истинных романтиков', price: 6000000,},
     ];
     const currentBasket = [];
-
     function addBasket() {
         console.log('клиик' + currentId);
         // Проверка выбран ли товар
@@ -45,26 +46,51 @@ function myProcessor() {
         }
     }
 
+    let current = null;
+
+    function display(element) {
+        current = element;
+        const src2 = element.getAttribute('data-big-src');
+        const bigElement = document.getElementById('bigPicture');
+        bigElement.innerHTML = '<img height="600" src="./' + src2 + '"  onerror="alert(\'Такое мы не доставляем. Уж сами как-нибудь. (Проверка на отсутствие)\')"/>';
+
+    }
+
+    function showNext() {
+        if (current && current.nextSibling) {
+            display(current.nextSibling);
+        }
+    }
+
+    function showPrev() {
+        if (current && current.previousSibling) {
+            display(current.previousSibling);
+        }
+    }
 
     function showBig(event) {
         const element = event.target;
-        const src = element.getAttribute('data-big-src');
-        const bigElement = document.getElementById('bigPicture');
-        bigElement.innerHTML = '<img height="600" src="./' + src + '"  onerror="alert(\'Такое мы не доставляем. Уж сами как-нибудь. (Проверка на отсутствие)\')"/>';
-        
+        display(element);
+        // const src = element.getAttribute('data-big-src');
+        // const bigElement = document.getElementById('bigPicture');
+        // bigElement.innerHTML = '<img height="600" src="./' + src + '"  onerror="alert(\'Такое мы не доставляем. Уж сами как-нибудь. (Проверка на отсутствие)\')"/>';
         // Присваиваем нынешний айди товара
         currentId = element.getAttribute('data-basket');
-
         // Показываем стоимость на данный товар и его название
         infoProduct.innerHTML = basket[currentId].name + ' — ' + basket[currentId].price + ' руб.';
     }
-  
+
+
     const images = document.getElementsByTagName('img');
+    console.log(images);
     for (let i = 0; i < images.length; i++) {
       const element = images[i];
       element.addEventListener('click', showBig);
       addBtn.addEventListener('click', addBasket);
     }
+
+    document.getElementById('last').addEventListener('click', showPrev);
+    document.getElementById('next').addEventListener('click', showNext);
   }
 
 window.onload = myProcessor;
